@@ -1,4 +1,5 @@
 Django~=5.1
+Pillow
 django-widget-tweaks
 django-jazzmin
 dj-database-url
