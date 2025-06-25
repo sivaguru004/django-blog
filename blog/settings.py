@@ -139,3 +139,11 @@ if not DEBUG:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # Potentially needed based on proxy config
+
+import mimetypes
+mimetypes.add_type("application/javascript", ".js", True)
+
+if DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
+
