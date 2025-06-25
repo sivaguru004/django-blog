@@ -1,0 +1,6 @@
+Django~=5.1
+django-widget-tweaks
+django-jazzmin
+dj-database-url
+whitenoise~=6.0
+gunicorn # For production web server

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block 'content' %}
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-4">
+                <h3>New Post</h3>
+                <div class="">
+                <!-- Error messages -->
+                <div class="">
+                 {% include "error.html" %}
+                </div>
+    
+                <div class="my-3">
+                    <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="title" class="form-label">Title</label>
+                        {{ form.title|add_class:"form-control" }}
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="content" class="form-label">Content</label>
+                        {{ form.content|add_class:"form-control" | attr:"rows:3" }}
+                    </div><br>
+                    <div class="form-group">
+                        <label for="image" class="form-label">Image</label>
+                        {{ form.img_url|add_class:"form-control-file" }}
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="category" class="form-label">Category</label>
+                        {{ form.catagory|add_class:"form-select" }}
+                    </div><br>
+                    
+                    <div class="my-3 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock 'content' %}
