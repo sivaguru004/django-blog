@@ -18,6 +18,7 @@ ALLOWED_HOSTS = ['sivaguru-blog.onrender.com']
 # Application definition
 INSTALLED_APPS = [
     'widget_tweaks',
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
